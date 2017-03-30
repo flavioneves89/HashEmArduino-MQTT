@@ -1,19 +1,19 @@
 #include <SpritzCipher.h>
 
-String salt = "fkllrnjnfd";
+String salt = "xyzxyzxyzx";
 int randNumber;
 String valorConcat;
 
 void randomico(){
   //Serial.begin(9600);
-  randomSeed(analogRead(0)); // inicia a lista de valores aleatórios
+  randomSeed(analogRead(0)); // Starts the list of random values
 
-  randNumber = random(100); // sorteia um número de 0 a 99
+  randNumber = random(100); // Draw a number from 0 to 99
 
   valorConcat = String(randNumber) + salt;
 
-  //Serial.println(valorConcat);  // envia o valor de randNumber pela serial
-  delay(500); // espera 500 ms
+  //Serial.println(valorConcat);  // Sends the value of randNumber to the serial
+  delay(500); // wait 500 ms
 }
 
 
@@ -21,7 +21,7 @@ void randomico(){
 
 const byte testData[12] = {randomico};
 
-/* Test vectors */
+
 /* Data = 'testData' hash test vectors */
 const byte testVector[32] =
 { 0xff, 0x8c, 0xf2, 0x68, 0x09, 0x4c, 0x87, 0xb9,
@@ -33,7 +33,7 @@ const byte testVector[32] =
 
 void testFunc(const byte ExpectedOutput[32], const byte *data, byte dataLen)
 {
-  byte hashLen = 32; /* 256-bit */
+  byte hashLen = 32; 
   byte digest[hashLen]; /* Output buffer */
   byte digest_2[hashLen]; /* Output buffer for chunk by chunk API */
   spritz_ctx hash_ctx; /* the CTX for chunk by chunk API */
