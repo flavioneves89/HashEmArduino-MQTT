@@ -7,13 +7,35 @@ Este projeto tem como objetivo desenvolver e especificar uma técnica que forne�
 
 Para validação da eficácia da técnica proposta para o uso do Hash, serão seguidas as seguintes etapas:
 
-Avaliação da Segurança (Conficencialidade dos dados transmitidos): Nesta etapa foram gerados valores Hash.
+Avaliação da Segurança (Conficencialidade dos dados transmitidos): Nesta etapa foram gerados valores Hash e então feita a tentativa de quebrar esses valores Hash com ferramentas disponiveis na Internet com esse proposito.
+
+hashkiller.co.uk/sha1-decrypter.aspx
+
+https://hashtoolkit.com/reverse-sha1-hash/
+
+http://md5decrypt.net/en/Sha1/
+
+http://insidepro.com/
+
+https://crackstation.net/
+
+http://sha1.gromweb.com/
+
+https://isc.sans.edu/tools/reversehash.html
+
+http://crackerpassword.sourceforge.net/
+
+
 
 Avaliação do consumo de recursos dos dispositivos (Consumo de memória e espaço de armazenamento do Arduino): Para isso foram executados os algoritimos e analisado quanto cada um consumia de recursos do Hardware:
 
-1.	Verificar quanta memória e espaço de armazenamento o dispositivo gasta para receber o valor e concatenar tudo (valor + Salt + contador);
-2.	Será feito um teste para verificar quanto de memória e espaço de armazenamento a execução da função Hash consome no dispositivo;
-3.	Constatar quanto o protocolo MQTT consome de memória e espaço de armazenamento do dispositivo para transmitir dados;
-4.	Testar quanto à concatenação e o Hash consomem juntos de memória e espaço de armazenamento do dispositivo;
-5.	Verificar quanto os três consomem de memória e espaço de armazenamento do dispositivo para capturar dados de um dispositivo, gerar o valor Hash e enviar para o Broker MQTT.
+1.	Verificar quanta memória e espaço de armazenamento o dispositivo gasta para receber o valor e concatenar tudo (valor + Salt + contador) - Algoritmo "gerar_aleatorios".
+
+2.	Será feito um teste para verificar quanto de memória e espaço de armazenamento a execução da função Hash consome no dispositivo para gerar o Hash de uma String com 14 caracteres - Algoritmo "gerar_hash_basico".
+
+3.	Constatar quanto o protocolo MQTT consome de memória e espaço de armazenamento do dispositivo para transmitir dados - Algoritmo "mqtt_basic_alterado".
+
+4.	Testar quanto à concatenação e o Hash consomem juntos de memória e espaço de armazenamento do dispositivo - Algoritmo "abordagem_completa".
+
+
 
