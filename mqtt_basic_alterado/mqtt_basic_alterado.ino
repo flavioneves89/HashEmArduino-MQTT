@@ -1,17 +1,3 @@
-/*
- Basic MQTT example
-
- This sketch demonstrates the basic capabilities of the library.
- It connects to an MQTT server then:
-  - publishes "hello world" to the topic "outTopic"
-  - subscribes to the topic "inTopic", printing out any messages
-    it receives. NB - it assumes the received payloads are strings not binary
-
- It will reconnect to the server if the connection is lost using a blocking
- reconnect function. See the 'mqtt_reconnect_nonblocking' example for how to
- achieve the same result without blocking the main loop.
- 
-*/
 
 #include <SPI.h>
 #include <Ethernet.h>
@@ -19,7 +5,7 @@
 
 // Update these with values suitable for your network.
 byte mac[]    = {  0x90, 0xA2, 0xDA, 0x0F, 0x09, 0xA8 };
-IPAddress ip(172, 16, 0, 100);
+IPAddress ip(172, 16, 0, 100); 
 IPAddress server(172, 16, 0, 2);
 
 void callback(char* topic, byte* payload, unsigned int length) {
