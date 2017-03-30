@@ -3,10 +3,10 @@
 
 /* Data to input */
 
-const byte testData[14] = {'g', 't','f', 'k', 'l', 'l','f', 'k', 'l', 'l', 'r', 'n', 'j', 'n'};
+const byte testData[14] = {'x', 'y','z', 'x', 'y', 'z','x', 'y', 'z', 'y', 'z', 'd', 'w', 'f'};
 
-/* Test vectors */
-/* Data = 'testData' hash test vectors */
+
+/* Data = 'testData' vetores de teste hash */
 const byte testVector[32] =
 { 0xff, 0x8c, 0xf2, 0x68, 0x09, 0x4c, 0x87, 0xb9,
   0x5f, 0x74, 0xce, 0x6f, 0xee, 0x9d, 0x30, 0x03,
@@ -17,7 +17,7 @@ const byte testVector[32] =
 
 void testFunc(const byte ExpectedOutput[32], const byte *data, byte dataLen)
 {
-  byte hashLen = 32; /* 256-bit */
+  byte hashLen = 32; 
   byte digest[hashLen]; /* Output buffer */
   byte digest_2[hashLen]; /* Output buffer for chunk by chunk API */
   spritz_ctx hash_ctx; /* the CTX for chunk by chunk API */
