@@ -9,7 +9,7 @@ Para validação da eficácia da técnica proposta para o uso do Hash, serão se
 
 Avaliação da Segurança (Conficencialidade dos dados transmitidos): Nesta etapa foram gerados valores Hash e então feita a tentativa de quebrar esses valores Hash com ferramentas disponiveis na Internet com esse proposito.
 
-hashkiller.co.uk/sha1-decrypter.aspx
+https://hashkiller.co.uk/sha1-decrypter.aspx
 
 https://hashtoolkit.com/reverse-sha1-hash/
 
