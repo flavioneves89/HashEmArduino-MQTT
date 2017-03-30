@@ -2,7 +2,7 @@
 
 #define hex_char(n) ((n) < 10 ? '0' + (n) : 'A' + ((n)-10))
 
-const char salt[] = "fkllrnjnfd";
+const char salt[] = "xyzxyzxyzy"; //A String with 10 characters
 char string[13] = "";
 byte hash[32]; // byte hash
 char hash_string[65]; // hex string hash 
@@ -13,7 +13,7 @@ void randomico(char *string)
     itoa(randNumber, string, 10); // convert int into char array
     strcat(string, salt); // concatenate salt
 }
-//fim da simulação
+//End of simulation
 void bytes_to_hexstr(char *string, byte *bytes, int size)
 {
     for (int i = 0; i < size; i++)
